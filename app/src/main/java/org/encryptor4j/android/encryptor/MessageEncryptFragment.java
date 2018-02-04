@@ -175,7 +175,7 @@ public class MessageEncryptFragment extends Fragment implements View.OnClickList
     private void requestUserAuthentication() {
         KeyguardManager keyguardManager = (KeyguardManager) getContext().getSystemService(Context.KEYGUARD_SERVICE);
         Resources resources = getResources();
-        Intent intent = keyguardManager.createConfirmDeviceCredentialIntent(resources.getString(R.string.authorize_key), resources.getString(R.string.please_authorize_crypto_key));
+        Intent intent = keyguardManager != null ? keyguardManager.createConfirmDeviceCredentialIntent(resources.getString(R.string.authorize_key), resources.getString(R.string.please_authorize_crypto_key)) : null;
         if (intent != null) {
             startActivityForResult(intent, CONFIRM_DEVICE_CREDENTIALS);
         }
@@ -188,7 +188,7 @@ public class MessageEncryptFragment extends Fragment implements View.OnClickList
     private CharSequence copyFromClipboard() {
         Context context = getContext();
         ClipboardManager clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
-        ClipData clipData = clipboardManager.getPrimaryClip();
+        ClipData clipData = clipboardManager != null ? clipboardManager.getPrimaryClip() : null;
         if(clipData != null && clipData.getItemCount() > 0) {
             ClipData.Item item = clipData.getItemAt(0);
             return item.coerceToText(context);
@@ -203,6 +203,7 @@ public class MessageEncryptFragment extends Fragment implements View.OnClickList
     private void copyToClipboard(String text) {
         ClipboardManager clipboardManager = (ClipboardManager) getContext().getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clipData = ClipData.newPlainText("", text);
+        assert clipboardManager != null;
         clipboardManager.setPrimaryClip(clipData);
     }
 

@@ -101,13 +101,13 @@ public class AddKeyFragment extends DialogFragment implements View.OnClickListen
 
         shareViaNFCCheckBox = view.findViewById(R.id.share_via_nfc);
         NfcManager nfcManager = (NfcManager) activity.getSystemService(Context.NFC_SERVICE);
-        NfcAdapter nfcAdapter = nfcManager.getDefaultAdapter();
+        NfcAdapter nfcAdapter = nfcManager != null ? nfcManager.getDefaultAdapter() : null;
         if (nfcAdapter != null && nfcAdapter.isEnabled()) {
             shareViaNFCCheckBox.setEnabled(true);
         }
 
         KeyguardManager keyguardManager = (KeyguardManager) activity.getSystemService(Context.KEYGUARD_SERVICE);
-        boolean deviceSecure = keyguardManager.isDeviceSecure();
+        boolean deviceSecure = keyguardManager != null && keyguardManager.isDeviceSecure();
 
         userAuthenticationRequiredCheckBox = view.findViewById(R.id.user_authentication_required);
         userAuthenticationRequiredCheckBox.setOnCheckedChangeListener(this);

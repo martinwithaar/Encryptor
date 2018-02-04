@@ -181,7 +181,7 @@ public class KeyStoreFragment extends Fragment implements AdapterView.OnItemClic
         }
         Collections.sort(aliases);
 
-        ArrayAdapter<String> adapter = (ArrayAdapter<String>) listView.getAdapter();
+        @SuppressWarnings("unchecked") ArrayAdapter<String> adapter = (ArrayAdapter<String>) listView.getAdapter();
         adapter.clear();
         adapter.addAll(aliases);
         adapter.notifyDataSetChanged();

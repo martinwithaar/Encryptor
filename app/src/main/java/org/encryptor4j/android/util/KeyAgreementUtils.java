@@ -33,6 +33,7 @@ public class KeyAgreementUtils {
     /**
      * Priority ordered list of supported curves. These may change over time but can offer backward compatibility by moving down the list.
      */
+    @SuppressWarnings("ArraysAsListWithZeroOrOneArgument")
     public static final List<String> SUPPORTED_CURVES_LIST = Arrays.asList(
             "curve25519"
     );

@@ -57,7 +57,7 @@ public class EncryptorHostApduService extends HostApduService {
 
                 byte[] encodedRemotePublicKey = IOUtils.toByteArray(dis);
 
-                KeyAgreementPeer keyAgreementPeer = new ECDHPeer(KeyAgreementUtils.resolveECParameterSpec(curve), "SC");
+                KeyAgreementPeer keyAgreementPeer = new ECDHPeer(KeyAgreementUtils.resolveECParameterSpec(curve), null, "SC");
                 ECPublicKey publicKey = (ECPublicKey) keyAgreementPeer.getPublicKey();
                 Log.d(TAG, "Public key: " + publicKey);
 

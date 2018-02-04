@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             setContentFragment(new KeyStoreFragment());
         }
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar toolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar actionBar = getSupportActionBar();
@@ -92,12 +92,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             actionBar.setHomeButtonEnabled(true);
         }
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);
 
         ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawerToggle.syncState();
 
-        navigationView = (NavigationView) findViewById(R.id.navigation);
+        navigationView = findViewById(R.id.navigation);
         navigationView.setNavigationItemSelectedListener(this);
 
         try {
@@ -242,7 +242,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         Collections.sort(aliases);
 
-        ArrayAdapter<String> adapter = (ArrayAdapter<String>) keySpinner.getAdapter();
+        @SuppressWarnings("unchecked") ArrayAdapter<String> adapter = (ArrayAdapter<String>) keySpinner.getAdapter();
         adapter.clear();
         adapter.addAll(aliases);
         adapter.notifyDataSetChanged();

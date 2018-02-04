@@ -221,10 +221,10 @@ public class FileEncryptFragment extends Fragment implements View.OnClickListene
     private void requestUserAuthentication() {
         KeyguardManager keyguardManager = (KeyguardManager) getContext().getSystemService(Context.KEYGUARD_SERVICE);
         Resources resources = getResources();
-        Intent intent = keyguardManager.createConfirmDeviceCredentialIntent(
+        Intent intent = keyguardManager != null ? keyguardManager.createConfirmDeviceCredentialIntent(
                 resources.getString(R.string.authorize_key),
                 resources.getString(R.string.please_authorize_crypto_key)
-        );
+        ) : null;
 
         if (intent != null) {
             startActivityForResult(intent, CONFIRM_DEVICE_CREDENTIALS);

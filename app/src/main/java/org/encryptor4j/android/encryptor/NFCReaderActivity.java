@@ -1,6 +1,7 @@
 package org.encryptor4j.android.encryptor;
 
 import android.app.DialogFragment;
+import android.net.Uri;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
 import android.nfc.tech.IsoDep;
@@ -54,7 +55,7 @@ public class NFCReaderActivity extends AppCompatActivity implements NfcAdapter.R
         // Setup layout
         setContentView(R.layout.activity_nfc_key_beam);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         ActionBar actionBar = getSupportActionBar();
@@ -114,7 +115,8 @@ public class NFCReaderActivity extends AppCompatActivity implements NfcAdapter.R
 
         @Override
         public void run() {
-            String secretKeyTransfer = getIntent().getData().getEncodedQuery();
+            Uri data = getIntent().getData();
+            String secretKeyTransfer = data != null ? data.getEncodedQuery() : null;
             if(secretKeyTransfer == null || secretKeyTransfer.isEmpty()) {
                 throw new IllegalArgumentException("There is no secret key transfer present");
             }
@@ -147,7 +149,7 @@ public class NFCReaderActivity extends AppCompatActivity implements NfcAdapter.R
                 Log.d(TAG, "Selected curve: " + curve);
 
                 // Initiate key agreement
-                KeyAgreementPeer keyAgreementPeer = new ECDHPeer(KeyAgreementUtils.resolveECParameterSpec(curve), "SC");
+                KeyAgreementPeer keyAgreementPeer = new ECDHPeer(KeyAgreementUtils.resolveECParameterSpec(curve), null, "SC");
                 ECPublicKey publicKey = (ECPublicKey) keyAgreementPeer.getPublicKey();
                 Log.d(TAG, "Public key: " + publicKey);
 

@@ -53,16 +53,6 @@ public class KeyFragment extends Fragment {
     private KeyStore keyStore;
     private String alias;
 
-    private TextView aliasView;
-    private TextView algorithmView;
-    private TextView keySizeView;
-    private TextView originView;
-    private TextView userAuthenticationValidityDurationSecondsTextView;
-    private CheckBox insideSecureHardwareCheckBox;
-    private CheckBox invalidatedByBiometricEnrollmentCheckBox;
-    private CheckBox userAuthenticationRequiredCheckBox;
-    private CheckBox userAuthenticationRequirementEnforcedBySecureHardwareCheckBox;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -96,35 +86,35 @@ public class KeyFragment extends Fragment {
 
         KeyInfo keyInfo = getKeyInfo(key);
 
-        aliasView = view.findViewById(R.id.alias);
+        TextView aliasView = view.findViewById(R.id.alias);
         aliasView.setText(keyInfo.getKeystoreAlias());
 
-        algorithmView = view.findViewById(R.id.algorithm);
+        TextView algorithmView = view.findViewById(R.id.algorithm);
         algorithmView.setText(key.getAlgorithm());
 
-        keySizeView = view.findViewById(R.id.key_size);
+        TextView keySizeView = view.findViewById(R.id.key_size);
         keySizeView.setText(String.valueOf(keyInfo.getKeySize()));
 
-        originView = view.findViewById(R.id.origin);
+        TextView originView = view.findViewById(R.id.origin);
         originView.setText(ORIGIN_RESOURCE_IDS.get(keyInfo.getOrigin()));
 
-        userAuthenticationValidityDurationSecondsTextView = view.findViewById(R.id.user_authentication_validity_duration_seconds);
+        TextView userAuthenticationValidityDurationSecondsTextView = view.findViewById(R.id.user_authentication_validity_duration_seconds);
         userAuthenticationValidityDurationSecondsTextView.setText(String.valueOf(keyInfo.getUserAuthenticationValidityDurationSeconds()));
 
-        insideSecureHardwareCheckBox = view.findViewById(R.id.inside_secure_hardware);
+        CheckBox insideSecureHardwareCheckBox = view.findViewById(R.id.inside_secure_hardware);
         insideSecureHardwareCheckBox.setChecked(keyInfo.isInsideSecureHardware());
 
-        invalidatedByBiometricEnrollmentCheckBox = view.findViewById(R.id.invalidated_by_biometric_enrollment);
+        CheckBox invalidatedByBiometricEnrollmentCheckBox = view.findViewById(R.id.invalidated_by_biometric_enrollment);
         if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             invalidatedByBiometricEnrollmentCheckBox.setChecked(keyInfo.isInvalidatedByBiometricEnrollment());
         } else {
             invalidatedByBiometricEnrollmentCheckBox.setError(getResources().getString(R.string.android_api_24_required));
         }
 
-        userAuthenticationRequiredCheckBox = view.findViewById(R.id.user_authentication_required);
+        CheckBox userAuthenticationRequiredCheckBox = view.findViewById(R.id.user_authentication_required);
         userAuthenticationRequiredCheckBox.setChecked(keyInfo.isUserAuthenticationRequired());
 
-        userAuthenticationRequirementEnforcedBySecureHardwareCheckBox = view.findViewById(R.id.user_authentication_requirement_enforced_by_secure_hardware);
+        CheckBox userAuthenticationRequirementEnforcedBySecureHardwareCheckBox = view.findViewById(R.id.user_authentication_requirement_enforced_by_secure_hardware);
         userAuthenticationRequirementEnforcedBySecureHardwareCheckBox.setChecked(keyInfo.isUserAuthenticationRequirementEnforcedBySecureHardware());
     }
 

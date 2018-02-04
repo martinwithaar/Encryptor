@@ -40,7 +40,7 @@ public class NFCKeyBeamActivity extends AppCompatActivity implements NfcAdapter.
         // Setup layout
         setContentView(R.layout.activity_nfc_key_beam);
 
-        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        Toolbar myToolbar = findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         ActionBar actionBar = getSupportActionBar();
