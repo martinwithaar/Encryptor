@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add">Toevoegen</string>
+    <string name="add_key">Sleutel toevoegen</string>
+    <string name="add_key_first">Voeg een sleutel toe</string>
+    <string name="aid_description">@string/app_name</string>
+    <string name="algorithm">Algoritme</string>
+    <string name="alias">Alias</string>
+    <string name="alias_required">Alias vereist</string>
+    <string name="android_api_24_required">Android API 24 vereist</string>
+    <string name="apdu_service_description">Symmetrische sleutel import</string>
+    <string name="app_name">Encryptor</string>
+    <string name="authorize_key">Sleutel autoriseren</string>
+    <string name="base64">Base64</string>
+    <string name="ciphertext">Cijfertekst</string>
+    <string name="ciphertext_copied_to_clipboard">Cijfertekst naar klembord gekopieerd</string>
+    <string name="confirm_delete_key">Deze sleutel wordt verwijderd!\n\nWeet u het zeker?</string>
+    <string name="decrypt">Ontsleutelen</string>
+    <string name="delete">Verwijderen</string>
+    <string name="encrypt">Versleutelen</string>
+    <string name="file_decrypted_successfully">Bestand succesvol ontsleuteld</string>
+    <string name="file_does_not_exist">Bestand bestaat niet</string>
+    <string name="file_encrypted_successfully">Bestand succesvol versleuteld</string>
+    <string name="file_encryption">Bestandsversleuteling</string>
+    <string name="file_must_end_with_ext">Bestandsnaam moet eindigen met .encrypted</string>
+    <string name="filename">Bestandsnaam</string>
+    <string name="filepath_required">Bestandspad vereist</string>
+    <string name="generated">Gegenereerd</string>
+    <string name="help">Help</string>
+    <string name="help_file_encryption">Bestanden worden versleuteld d.m.v. AES CTR mode. Versleutelde bestanden hebben de <i>.encrypted</i> extensie.\n\nAls je meerdere bestanden en/of mappen wil versleutelen zult u deze eerst in één enkel archiefbestand moeten plaatsen.</string>
+    <string name="help_message_encryption">Berichten worden versleuteld d.m.v. AES GCM mode met een <i>tLen</i> van 128 bits.\n\nVink de <b>Gebruik klembord</b> optie aan om automatisch text te kopiëren van en naar het klembord.</string>
+    <string name="help_nfc_key_export">Sleutels worden veilig geëxporteerd d.m.v. NFC in combinatie met een ECDH (Elliptic-Curve Diffie-Hellman) versleuteling.\n\nHierbij wordt standaard de <i>curve25519</i> curve gebruikt.</string>
+    <string name="imported">Geïmporteerd</string>
+    <string name="info">Info</string>
+    <string name="info_message">Encryptor for Android is een open-source project dat zich inzet voor het beschikbaar maken van sterke versleuteling voor iedereen\n\nProject website:\n<a href=""></a></string>
+    <string name="inside_secure_hardware">Opgeslagen in veilige hardware</string>
+    <string name="invalidated_by_biometric_enrollment">Geïnvalideerd door biometrische registratie</string>
+    <string name="key">Sleutel</string>
+    <string name="key_beamed_successfully">Sleutel succesvol verstuurd</string>
+    <string name="key_is_not_exportable">Sleutel is niet exporteerbaar</string>
+    <string name="key_received_successfully">Sleutel succesvol ontvangen</string>
+    <string name="key_size">Sleutelgrootte</string>
+    <string name="key_source_required">Sleutel bron vereist</string>
+    <string name="key_store">Sleutelopslag</string>
+    <string name="key_type">Sleutel type</string>
+    <string name="message_encryption">Berichtversleuteling</string>
+    <string name="navigation_drawer_close">Sluiten</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="nfc_explanation">Hou dit apparaat met de achterkant tegen de achterkant van een ander apparaat om te verzenden.\n\nHerhaal met zoveel apparaten als gewenst.</string>
+    <string name="nfc_not_available">NFC is niet beschikbaar</string>
+    <string name="no">Nee</string>
+    <string name="origin">Oorsprong</string>
+    <string name="password">Wachtwoord</string>
+    <string name="plaintext">Tekst</string>
+    <string name="plaintext_copied_to_clipboard">Tekst gekopieerd naar klembord</string>
+    <string name="please_authorize_crypto_key">Autoriseer de cryptografische sleutel</string>
+    <string name="random">Willekeurig</string>
+    <string name="scan_other_device">Scan andere apparaat</string>
+    <string name="select_file">Selecteer bestand</string>
+    <string name="settings">Instellingen</string>
+    <string name="share_via_nfc">Delen via NFC</string>
+    <string name="to_clipboard">Naar klembord</string>
+    <string name="unknown">Onbekend</string>
+    <string name="use_clipboard">Gebruik klembord</string>
+    <string name="user_authentication_required">Gebruikers-authenticatie vereist</string>
+    <string name="user_authentication_requirement_enforced_by_secure_hardware">Gebruikers-authenticatie vereiste toegepast door veilige hardware</string>
+    <string name="user_authentication_validity_duration_seconds">Gebruikers-authenticatie geldigheidsduur seconden</string>
+    <string name="version">Versie</string>
+    <string name="warning">Waarschuwing</string>
+    <string name="yes">Ja</string>
+
+    <string-array name="key_types">
+        <item>@string/random</item>
+        <item>@string/password</item>
+        <item>@string/base64</item>
+    </string-array>
+
+    <string-array name="aes_key_sizes">
+        <item>256</item>
+        <item>192</item>
+        <item>128</item>
+    </string-array>
+</resources>

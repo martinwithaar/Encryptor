@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/key_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/key_type" />
+
+    <Spinner
+        android:id="@+id/key_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_type_label"/>
+
+    <TextView
+        android:id="@+id/key_size_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_type"
+        android:text="@string/key_size" />
+
+    <Spinner
+        android:id="@+id/key_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_size_label" />
+
+    <EditText
+        android:id="@+id/alias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_size"
+        android:hint="@string/alias" />
+
+    <EditText
+        android:id="@+id/key_source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/alias"
+        android:hint="@string/key"
+        android:enabled="false" />
+
+    <CheckBox
+        android:id="@+id/share_via_nfc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/key_source"
+        android:text="@string/share_via_nfc"
+        android:enabled="false"/>
+
+    <CheckBox
+        android:id="@+id/user_authentication_required"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_via_nfc"
+        android:text="@string/user_authentication_required"/>
+
+    <TextView
+        android:id="@+id/user_authentication_validity_duration_seconds_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_authentication_required"
+        android:text="@string/user_authentication_validity_duration_seconds" />
+
+    <EditText
+        android:id="@+id/user_authentication_validity_duration_seconds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_authentication_validity_duration_seconds_label"
+        android:inputType="number"
+        android:text="@integer/default_user_authentication_validity_duration_seconds"
+        android:hint="@string/user_authentication_validity_duration_seconds"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_authentication_validity_duration_seconds"
+        android:layout_centerHorizontal="true"
+        android:text="@string/add"/>
+
+</RelativeLayout>

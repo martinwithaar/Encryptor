@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!-- extend one of the Theme.AppCompat themes -->
+<style name="Theme.MyTheme" parent="Theme.AppCompat.NoActionBar">
+    <!-- customize the color palette -->
+    <item name="colorPrimary">@color/material_lightblue_500</item>
+    <item name="colorPrimaryDark">@color/material_lightblue_700</item>
+    <item name="colorAccent">@color/material_lightblue_a200</item>
+    <!--
+    <item name="android:textColorPrimary">@android:color/white</item>
+    -->
+</style>
+</resources>

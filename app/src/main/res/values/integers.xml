@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+    <integer name="min_user_authentication_validity_duration_seconds">0</integer>
+    <integer name="max_user_authentication_validity_duration_seconds">3600</integer>
+    -->
+    <integer name="default_user_authentication_validity_duration_seconds">60</integer>
+</resources>

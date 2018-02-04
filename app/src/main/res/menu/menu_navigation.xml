@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="nkdroid.tutorial.navigationview.MainActivity">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/key_store"
+            android:title="@string/key_store"
+            android:icon="@drawable/ic_lock_black_24dp"/>
+
+        <item
+            android:id="@+id/file_encryption"
+            android:title="@string/file_encryption"
+            android:icon="@drawable/ic_insert_drive_file_black_24dp"/>
+
+        <item
+            android:id="@+id/message_encryption"
+            android:title="@string/message_encryption"
+            android:icon="@drawable/ic_comment_black_24dp"/>
+    </group>
+</menu>

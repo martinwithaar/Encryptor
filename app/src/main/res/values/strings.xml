@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="add">Add</string>
+    <string name="add_key">Add key</string>
+    <string name="add_key_first">Add key first</string>
+    <string name="aid_description">@string/app_name</string>
+    <string name="algorithm">Algorithm</string>
+    <string name="alias">Alias</string>
+    <string name="alias_required">Alias required</string>
+    <string name="android_api_24_required">Android API 24 required</string>
+    <string name="apdu_service_description">Symmetric key import</string>
+    <string name="app_name">Encryptor</string>
+    <string name="authorize_key">Authorize key</string>
+    <string name="base64">Base64</string>
+    <string name="ciphertext">Ciphertext</string>
+    <string name="ciphertext_copied_to_clipboard">Ciphertext copied to clipboard</string>
+    <string name="confirm_delete_key">This key will be deleted!\n\nAre you sure?</string>
+    <string name="decrypt">Decrypt</string>
+    <string name="delete">Delete</string>
+    <string name="encrypt">Encrypt</string>
+    <string name="file_decrypted_successfully">File decrypted successfully</string>
+    <string name="file_does_not_exist">File does not exist</string>
+    <string name="file_encrypted_successfully">File encrypted successfully</string>
+    <string name="file_encryption">File encryption</string>
+    <string name="file_must_end_with_ext">File must end with .encrypted</string>
+    <string name="filename">File name</string>
+    <string name="filepath_required">Filepath required</string>
+    <string name="generated">Generated</string>
+    <string name="help">Help</string>
+    <string name="help_file_encryption">Files are encrypted using AES CTR mode. Encrypted files have the <i>.encrypted</i> extension.\n\nIf you want to encrypt multiple files and/or directories you should first compress them into a single archive.</string>
+    <string name="help_message_encryption">Messages are encrypted using AES GCM mode with a <i>tLen</i> of 128 bits.\n\nCheck the <b>Use clipboard</b> option to automatically copy text from and to the clipboard.</string>
+    <string name="help_nfc_key_export">Keys are exported securely via NFC using an ECDH (Elliptic-Curve Diffie-Hellman) encrypted channel.\n\nIt uses <i>curve25519</i> by default.</string>
+    <string name="imported">Imported</string>
+    <string name="info">Info</string>
+    <string name="info_message">Encryptor for Android is an open-source project dedicated to making strong encryption available to everyone\n\nProject website:\n<a href=""></a></string>
+    <string name="inside_secure_hardware">Inside secure hardware</string>
+    <string name="invalidated_by_biometric_enrollment">Invalidated by biometric enrollment</string>
+    <string name="key">Key</string>
+    <string name="key_beamed_successfully">Key beamed successfully</string>
+    <string name="key_is_not_exportable">Key is not exportable</string>
+    <string name="key_received_successfully">Key received successfully</string>
+    <string name="key_size">Key size</string>
+    <string name="key_source_required">Key source required</string>
+    <string name="key_store">Key store</string>
+    <string name="key_type">Key type</string>
+    <string name="message_encryption">Message encryption</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="nfc_explanation">Hold this device back-to-back against another device to transmit.\n\nRepeat with as many devices as desired.</string>
+    <string name="nfc_not_available">NFC is not available</string>
+    <string name="no">No</string>
+    <string name="origin">Origin</string>
+    <string name="password">Password</string>
+    <string name="plaintext">Plaintext</string>
+    <string name="plaintext_copied_to_clipboard">Plaintext copied to clipboard</string>
+    <string name="please_authorize_crypto_key">Please authorize the cryptographic key</string>
+    <string name="random">Random</string>
+    <string name="scan_other_device">Scan other device</string>
+    <string name="select_file">Select file</string>
+    <string name="settings">Settings</string>
+    <string name="share_via_nfc">Share via NFC</string>
+    <string name="to_clipboard">To clipboard</string>
+    <string name="unknown">Unknown</string>
+    <string name="use_clipboard">Use clipboard</string>
+    <string name="user_authentication_required">User authentication required</string>
+    <string name="user_authentication_requirement_enforced_by_secure_hardware">User authentication requirement enforced by secure hardware</string>
+    <string name="user_authentication_validity_duration_seconds">User authentication validity duration seconds</string>
+    <string name="version">Version</string>
+    <string name="warning">Warning</string>
+    <string name="yes">Yes</string>
+
+    <string-array name="key_types">
+        <item>@string/random</item>
+        <item>@string/password</item>
+        <item>@string/base64</item>
+    </string-array>
+
+    <string-array name="aes_key_sizes">
+        <item>256</item>
+        <item>192</item>
+        <item>128</item>
+    </string-array>
+</resources>
