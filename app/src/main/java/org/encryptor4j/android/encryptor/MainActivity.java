@@ -50,12 +50,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     public static final String TAG = MainActivity.class.getSimpleName();
 
-//    public static final String ALGORITHM = "algorithm";
-//    public static final String ALIAS = "alias";
-//    public static final String KEY = "key";
-//    public static final String USER_AUTHENTICATION_REQUIRED = "userAuthenticationRequired";
-//    public static final String USER_AUTHENTICATION_VALIDITY_DURATION_SECONDS = "userAuthenticationValidityDurationSeconds";
-
     public static final String ALGORITHM = "r";
     public static final String ALIAS = "a";
     public static final String KEY = "k";
@@ -281,6 +275,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    /**
+     * Imports a key from the give uri.
+     * @param uri
+     */
     private void importKeyFromUri(Uri uri) {
         // Prepare key parameters
         String alias = uri.getQueryParameter(ALIAS);

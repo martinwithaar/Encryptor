@@ -1,5 +1,6 @@
 package org.encryptor4j.android.encryptor;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -26,7 +27,7 @@ public class InfoDialogFragment extends DialogFragment {
         builder.setTitle(R.string.info);
 
         LayoutInflater layoutInflater = LayoutInflater.from(getActivity());
-        View view = layoutInflater.inflate(R.layout.dialog_about, null);
+        @SuppressLint("InflateParams") View view = layoutInflater.inflate(R.layout.dialog_about, null);
         TextView textView = view.findViewById(R.id.text);
         textView.setMovementMethod(LinkMovementMethod.getInstance());
         Activity activity = getActivity();
@@ -34,8 +35,7 @@ public class InfoDialogFragment extends DialogFragment {
             PackageInfo packageInfo = activity.getPackageManager().getPackageInfo(activity.getPackageName(), 0);
             TextView versionView = view.findViewById(R.id.version);
             versionView.setText(packageInfo.versionName);
-        } catch(PackageManager.NameNotFoundException e) {
-            // Do nothing
+        } catch(PackageManager.NameNotFoundException ignored) {
         }
         builder.setView(view);
 
