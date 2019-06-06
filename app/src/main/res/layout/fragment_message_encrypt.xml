@@ -1,66 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
     <EditText
         android:id="@+id/plaintext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/plaintext"
         android:inputType="textMultiLine"
         android:lines="4"
         android:maxLines="8"
-        android:hint="@string/plaintext" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_conversion_wrapHeight="182"
+        tools:layout_conversion_wrapWidth="996" />
 
     <Button
         android:id="@+id/encrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/plaintext"
-        android:text="@string/encrypt" />
+        android:text="@string/encrypt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/plaintext"
+        tools:layout_conversion_wrapHeight="50"
+        tools:layout_conversion_wrapWidth="127" />
 
     <Button
         android:id="@+id/decrypt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@id/encrypt"
-        android:layout_toEndOf="@id/encrypt"
-        android:text="@string/decrypt" />
+        android:text="@string/decrypt"
+        app:layout_constraintBottom_toBottomOf="@id/encrypt"
+        app:layout_constraintStart_toEndOf="@id/encrypt"
+        tools:layout_conversion_wrapHeight="50"
+        tools:layout_conversion_wrapWidth="129" />
 
     <Button
         android:id="@+id/plaintext_to_clipboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/plaintext"
-        android:layout_alignEnd="@id/plaintext"
-        android:text="@string/to_clipboard" />
+        android:text="@string/to_clipboard"
+        app:layout_constraintEnd_toEndOf="@id/plaintext"
+        app:layout_constraintTop_toBottomOf="@id/plaintext"
+        tools:layout_conversion_wrapHeight="50"
+        tools:layout_conversion_wrapWidth="209" />
 
     <CheckBox
         android:id="@+id/use_clipboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/encrypt"
-        android:text="@string/use_clipboard" />
+        android:text="@string/use_clipboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/encrypt"
+        tools:layout_conversion_wrapHeight="50"
+        tools:layout_conversion_wrapWidth="228" />
 
     <EditText
         android:id="@+id/ciphertext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/use_clipboard"
+        android:hint="@string/ciphertext"
         android:inputType="textMultiLine"
         android:lines="4"
         android:maxLines="8"
-        android:hint="@string/ciphertext" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/use_clipboard"
+        tools:layout_conversion_wrapHeight="182"
+        tools:layout_conversion_wrapWidth="996" />
 
     <Button
         android:id="@+id/ciphertext_to_clipboard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ciphertext"
-        android:layout_alignEnd="@id/ciphertext"
-        android:text="@string/to_clipboard" />
-</RelativeLayout>
+        android:text="@string/to_clipboard"
+        app:layout_constraintEnd_toEndOf="@id/ciphertext"
+        app:layout_constraintTop_toBottomOf="@id/ciphertext"
+        tools:layout_conversion_wrapHeight="50"
+        tools:layout_conversion_wrapWidth="209" />
+</androidx.constraintlayout.widget.ConstraintLayout>
