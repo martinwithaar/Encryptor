@@ -1,13 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 29
 
     defaultConfig {
         applicationId "android.encryptor4j.org.encryptor"
         minSdkVersion 23
-        targetSdkVersion 26
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
     }
@@ -25,14 +24,14 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    
-    compile 'com.android.support:appcompat-v7:26.1.0'
-    compile 'com.android.support:design:26.1.0'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    compile 'org.encryptor4j:encryptor4j:0.1.2'
-    compile 'com.madgag.spongycastle:core:1.56.0.0'
-    compile 'com.madgag.spongycastle:prov:1.56.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
 
-    testCompile 'junit:junit:4.12'
+    implementation 'org.encryptor4j:encryptor4j:0.1.2'
+    implementation 'com.madgag.spongycastle:core:1.56.0.0'
+    implementation 'com.madgag.spongycastle:prov:1.56.0.0'
+
+    testImplementation 'junit:junit:4.12'
 }

@@ -5,7 +5,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.security.keystore.KeyInfo;
 import android.security.keystore.KeyProperties;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.util.SparseIntArray;
 import android.view.LayoutInflater;
 import android.view.View;
