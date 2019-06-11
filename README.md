@@ -1,9 +1,6 @@
 # Encryptor
 Strong & secure encryption for Android
 
-## Download the app
-<a href='https://play.google.com/store/apps/details?id=com.bogdwellers.pinchtozoom&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="223" /></a>
-
 ## Overview
 Encryptor is an open-source encryption solution for Android devices based on the Encryptor4j library. It supports encryption of both files and text messages and securely stores cryptographic keys using the Android keystore.
 
