@@ -32,7 +32,7 @@
     <string name="help_nfc_key_export">Keys are exported securely via NFC using an ECDH (Elliptic-Curve Diffie-Hellman) encrypted channel.\n\nIt uses <i>curve25519</i> by default.</string>
     <string name="imported">Imported</string>
     <string name="info">Info</string>
-    <string name="info_message">Encryptor for Android is an open-source project dedicated to making strong encryption available to everyone\n\nProject website:\n<a href=""></a></string>
+    <string name="info_message">Encryptor for Android is an open-source project dedicated to making strong encryption available to everyone\n\nProject website:\n<a href="https://github.com/martinwithaar/encryptor">https://github.com/martinwithaar/encryptor</a></string>
     <string name="inside_secure_hardware">Inside secure hardware</string>
     <string name="invalidated_by_biometric_enrollment">Invalidated by biometric enrollment</string>
     <string name="key">Key</string>

@@ -32,7 +32,7 @@
     <string name="help_nfc_key_export">Sleutels worden veilig geëxporteerd d.m.v. NFC in combinatie met een ECDH (Elliptic-Curve Diffie-Hellman) versleuteling.\n\nHierbij wordt standaard de <i>curve25519</i> curve gebruikt.</string>
     <string name="imported">Geïmporteerd</string>
     <string name="info">Info</string>
-    <string name="info_message">Encryptor for Android is een open-source project dat zich inzet voor het beschikbaar maken van sterke versleuteling voor iedereen\n\nProject website:\n<a href=""></a></string>
+    <string name="info_message">Encryptor for Android is een open-source project dat zich inzet voor het beschikbaar maken van sterke versleuteling voor iedereen\n\nProject website:\n<a href="https://github.com/martinwithaar/encryptor">https://github.com/martinwithaar/encryptor</a></string>
     <string name="inside_secure_hardware">Opgeslagen in veilige hardware</string>
     <string name="invalidated_by_biometric_enrollment">Geïnvalideerd door biometrische registratie</string>
     <string name="key">Sleutel</string>
